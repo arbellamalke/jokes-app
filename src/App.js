@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from "react";
+
+const jokes = "https://api.icndb.com/jokes/random"
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+	const[joke, setJoke] = useState('');
+	
+	const getJoke = () => {
+		fetch(jokes)
+		.then(res => res.json())
+		.then(data => setJoke (data.value.joke));
+	} 
+	useEffect(() => {
+		getJoke();
+	}, [])
+return (
+	<div className="box">
+		<h1>Welcome to Joy and Arbellas joke generator</h1>
+		<p dangerouslySetInnerHTML={{__html: joke}}/>
+		<button onClick={getJoke}>Click on me to laugh! </button>
+	</div>
+)
+};
+ 
 export default App;
