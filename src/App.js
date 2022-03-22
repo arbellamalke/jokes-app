@@ -16,7 +16,7 @@ function App() {
 	}, [])
 return (
 	<div className="box">
-		<h1>Welcome to Joy and Arbellas joke generatorhhh</h1>
+		<h1>Welcome to Joy and Arbellas joke generator</h1>
 		<p dangerouslySetInnerHTML={{__html: joke}}/>
 		<button onClick={getJoke}>Click on me to laugh! </button>
 	</div>
