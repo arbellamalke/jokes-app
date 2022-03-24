@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Six+Caps&display=swap');
+
+
  body {
  background-color: #A6ECE0;
- margin: 0;
+ margin: 100;
+ background-image: url("https://media1.fdncms.com/inlander/imager/u/original/9259533/artsculture2-1-2103d40c0bc36f29.jpg");
+ 
 }
-
 
 #root {
   display: flex;
   align-items: center;
   justify-content: center;
-min-height: 100vh;
+  min-height: 100vh;
 }
 
 .box{
@@ -49,4 +52,38 @@ min-height: 100vh;
 }
 .box button:focus{
 outline: none;
+}
+
+form{
+  position: fixed;
+  margin: 150px;
+}
+form #storageBtn
+{
+  border-radius: 50rem;
+  padding: 2%;
+}
+form #get{
+  margin:0;
+}
+
+.laugh {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+/* Demo Purpose Only*/
+.demo {
+  font-family: 'Raleway', sans-serif;
+	color:#fff;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+.demo a{
+  font-family: 'Raleway', sans-serif;
+color: #000;		
 }
